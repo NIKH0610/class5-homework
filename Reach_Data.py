@@ -9,9 +9,19 @@ bs = pd.DataFrame(boston.data)
 bs.columns = boston.feature_names
 bs
 
-x = bs['CRIM']
-plt.hist(x, bins = 50);
-plt.xlabel('something')
-plt.ylabel('something else')
-plt.title('some some')
+x = bs['AGE']
+plt.hist(x,bins = 20);
+plt.xlabel('AGE')
+plt.ylabel('NO. OF PEOPLE')
+plt.title('AGE v/s PEOPLE')
 plt.show()
+
+y = bs['TAX']
+plt.scatter(x,y,marker = '*')
+plt.xlabel('AGE')
+plt.ylabel('TAX PAID')
+plt.title('AGE v/s TAX')
+plt.show()
+
+
+
