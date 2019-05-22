@@ -1,5 +1,6 @@
 import sklearn
 import pandas as pd
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -8,6 +9,8 @@ boston = load_boston()
 bs = pd.DataFrame(boston.data)
 bs.columns = boston.feature_names
 bs
+
+time.sleep(20)
 
 x = bs['AGE']
 plt.hist(x,bins = 20);
